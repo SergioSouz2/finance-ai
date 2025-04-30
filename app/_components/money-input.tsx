@@ -16,8 +16,6 @@ export const MoneyInput = forwardRef(
         prefix="R$ "
         allowNegative={false}
         customInput={Input}
-        decimalScale={2}
-        fixedDecimalScale={true}
         getInputRef={ref}
       />
     );
