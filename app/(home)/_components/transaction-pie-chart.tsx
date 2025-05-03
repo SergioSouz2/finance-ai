@@ -13,10 +13,15 @@ import { Pie, PieChart } from "recharts";
 import PercentegeItem from "./percentege-item";
 import { PiggyBankIcon, TrendingDownIcon, TrendingUpIcon } from "lucide-react";
 
+import colors from "tailwindcss/colors";
+
 const chartConfig = {
-  [TransactionsType.INVESTMENT]: { label: "Investido", color: "#FFFFFF" },
-  [TransactionsType.DEPOSIT]: { label: "Receita", color: "#55B02E" },
-  [TransactionsType.EXPENSE]: { label: "Despesas", color: "#E93030" },
+  [TransactionsType.INVESTMENT]: {
+    label: "Investido",
+    color: colors.zinc[500],
+  },
+  [TransactionsType.DEPOSIT]: { label: "Receita", color: colors.green[500] },
+  [TransactionsType.EXPENSE]: { label: "Despesas", color: colors.red[500] },
 } satisfies ChartConfig;
 
 interface TransactionPieChatProps {
@@ -36,17 +41,17 @@ const TransactionPieChat = ({
     {
       type: TransactionsType.DEPOSIT,
       amount: depositsTotal,
-      fill: "#55B02E",
+      fill: colors.green[500],
     },
     {
       type: TransactionsType.EXPENSE,
       amount: expensesTotal,
-      fill: "#E93030",
+      fill: colors.red[500],
     },
     {
       type: TransactionsType.INVESTMENT,
       amount: investimentsTotal,
-      fill: "#FFFFFF",
+      fill: colors.zinc[500],
     },
   ];
 
@@ -85,7 +90,7 @@ const TransactionPieChat = ({
           />
 
           <PercentegeItem
-            icon={<PiggyBankIcon size={20} className="text-white" />}
+            icon={<PiggyBankIcon size={20} className="text-zinc-500" />}
             title={"Investido"}
             value={typesPercentage[TransactionsType.INVESTMENT]}
           />

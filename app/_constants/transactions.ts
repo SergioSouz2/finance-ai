@@ -13,7 +13,7 @@ export const TRANSACTION_CATEGORY_LABELS = {
   OTHER: "Outros",
   SALARY: "Salário",
   TRANSPORTATION: "Transporte",
-  UTILITIES: "Utilidades",
+  UTILITY: "Utilidades",
 };
 
 export const TRANSACTION_PAYMENT_METHOD_LABELS = {
@@ -46,10 +46,7 @@ export const TRANSACTION_CATEGORY_OPTIONS = [
     value: TransactionsCategory.EDUCATION,
     label: TRANSACTION_CATEGORY_LABELS[TransactionsCategory.EDUCATION],
   },
-  {
-    value: TransactionsCategory.ENTERTAINMENT,
-    label: TRANSACTION_CATEGORY_LABELS[TransactionsCategory.ENTERTAINMENT],
-  },
+
   {
     value: TransactionsCategory.FOOD,
     label: TRANSACTION_CATEGORY_LABELS[TransactionsCategory.FOOD],
