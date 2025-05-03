@@ -3,7 +3,6 @@ import { Mulish } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
-import Navbar from "./_components/navbar";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -27,8 +26,6 @@ export default function RootLayout({
             baseTheme: dark,
           }}
         >
-          <Navbar />
-
           {children}
         </ClerkProvider>
       </body>

@@ -15,12 +15,6 @@ const EditTransactionButton = ({
   transactions,
 }: EditTransactionButtonProps) => {
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
-
-  // 1. Define your form.
-  console.log(transactions);
-
-  // 2. Define a submit handler.
-
   return (
     <>
       <Button
