@@ -9,6 +9,7 @@ const getDashboard = async (month: string, userId: string) => {
   const currentYear = new Date().getFullYear(); // Obtém o ano atual dinamicamente
 
   const where = {
+    userId,
     date: {
       gte: new Date(`${currentYear}-${month}-01`), // Data inicial
       lt: new Date(`${currentYear}-${month}-31`), // Data final
@@ -18,7 +19,7 @@ const getDashboard = async (month: string, userId: string) => {
   const depositsTotal = Number(
     (
       await db.transactions.aggregate({
-        where: { ...where, type: "DEPOSIT", userId: userId },
+        where: { ...where, type: "DEPOSIT" },
         _sum: { amount: true },
       })
     )?._sum.amount,
@@ -27,7 +28,7 @@ const getDashboard = async (month: string, userId: string) => {
   const investimentsTotal = Number(
     (
       await db.transactions.aggregate({
-        where: { ...where, type: "INVESTMENT", userId: userId },
+        where: { ...where, type: "INVESTMENT" },
         _sum: { amount: true },
       })
     )?._sum.amount,
@@ -36,7 +37,7 @@ const getDashboard = async (month: string, userId: string) => {
   const expensesTotal = Number(
     (
       await db.transactions.aggregate({
-        where: { ...where, type: "EXPENSE", userId: userId },
+        where: { ...where, type: "EXPENSE" },
         _sum: { amount: true },
       })
     )?._sum.amount,
@@ -47,7 +48,7 @@ const getDashboard = async (month: string, userId: string) => {
   const transactionsTotal = Number(
     (
       await db.transactions.aggregate({
-        where: { ...where, userId: userId },
+        where: { ...where },
         _sum: { amount: true },
       })
     )._sum.amount,
@@ -71,7 +72,6 @@ const getDashboard = async (month: string, userId: string) => {
       where: {
         ...where,
         type: TransactionsType.EXPENSE,
-        userId: userId,
       },
       _sum: {
         amount: true,
@@ -88,7 +88,6 @@ const getDashboard = async (month: string, userId: string) => {
   const lastTransactions = await db.transactions.findMany({
     where: {
       ...where,
-      userId: userId,
     },
     orderBy: { date: "desc" },
   });
