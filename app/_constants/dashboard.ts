@@ -1,3 +1,5 @@
+import { transactionsPaymentMethod } from "../generated/prisma";
+
 export const MONTH_OPTIONS = [
   { value: "1", label: "Janeiro" },
   { value: "2", label: "Fevereiro" },
@@ -12,3 +14,13 @@ export const MONTH_OPTIONS = [
   { value: "11", label: "Novembro" },
   { value: "12", label: "Dezembro" },
 ];
+
+export const TRANSACTION_PAYMENT_METHOD_ICONS = {
+  [transactionsPaymentMethod.BANK_TRANSFER]: "bank-transfer.svg",
+  [transactionsPaymentMethod.BANK_SLIP]: "bank-slip.svg",
+  [transactionsPaymentMethod.CASH]: "money.svg",
+  [transactionsPaymentMethod.CREDIT_CARD]: "credit-card.svg",
+  [transactionsPaymentMethod.DEBIT_CARD]: "debit-card.svg",
+  [transactionsPaymentMethod.OTHER]: "other.svg",
+  [transactionsPaymentMethod.PIX]: "pix.svg",
+};

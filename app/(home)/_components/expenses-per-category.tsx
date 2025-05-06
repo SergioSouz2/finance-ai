@@ -28,7 +28,7 @@ const ExpensesPerCategory = ({
               </p>
               <p className="text-sm font-bold">{category.percentageOfTotal}%</p>
             </div>
-            <Progress value={category.percentageOfTotal} />
+            <Progress value={category.percentageOfTotal} className="h-3" />
           </div>
         ))}
       </CardContent>
