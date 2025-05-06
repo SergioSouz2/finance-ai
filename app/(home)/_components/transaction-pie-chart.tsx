@@ -56,8 +56,8 @@ const TransactionPieChat = ({
   ];
 
   return (
-    <Card className="flex flex-col p-6">
-      <CardContent className="flex-1 pb-2">
+    <Card className="flex flex-col">
+      <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
           className="mx-auto aspect-square max-h-[250px]"
@@ -71,26 +71,26 @@ const TransactionPieChat = ({
               data={chartData}
               dataKey="amount"
               nameKey="type"
-              innerRadius={50}
+              innerRadius={60}
             />
           </PieChart>
         </ChartContainer>
 
         <div className="space-y-2">
           <PercentegeItem
-            icon={<TrendingUpIcon size={20} className="text-primary" />}
+            icon={<TrendingUpIcon size={12} className="text-primary" />}
             title={"Receita"}
             value={typesPercentage[TransactionsType.DEPOSIT]}
           />
 
           <PercentegeItem
-            icon={<TrendingDownIcon size={20} className="text-red-500" />}
+            icon={<TrendingDownIcon size={12} className="text-red-500" />}
             title={"Despesas"}
             value={typesPercentage[TransactionsType.EXPENSE]}
           />
 
           <PercentegeItem
-            icon={<PiggyBankIcon size={20} className="text-zinc-500" />}
+            icon={<PiggyBankIcon size={12} className="text-zinc-500" />}
             title={"Investido"}
             value={typesPercentage[TransactionsType.INVESTMENT]}
           />

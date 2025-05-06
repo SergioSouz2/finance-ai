@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Mulish } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
 import { ThemeProvider } from "./_provider/theme-provider";
 
 const mulish = Mulish({
@@ -41,7 +40,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex h-full flex-col overflow-hidden">
+              {children}
+            </div>
           </ThemeProvider>
         </ClerkProvider>
       </body>
