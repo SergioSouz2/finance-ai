@@ -76,21 +76,21 @@ const TransactionPieChat = ({
           </PieChart>
         </ChartContainer>
 
-        <div className="space-y-2">
+        <div className="mb-6 space-y-6">
           <PercentegeItem
-            icon={<TrendingUpIcon size={12} className="text-primary" />}
+            icon={<TrendingUpIcon size={16} className="text-primary" />}
             title={"Receita"}
             value={typesPercentage[TransactionsType.DEPOSIT]}
           />
 
           <PercentegeItem
-            icon={<TrendingDownIcon size={12} className="text-red-500" />}
+            icon={<TrendingDownIcon size={16} className="text-red-500" />}
             title={"Despesas"}
             value={typesPercentage[TransactionsType.EXPENSE]}
           />
 
           <PercentegeItem
-            icon={<PiggyBankIcon size={12} className="text-zinc-500" />}
+            icon={<PiggyBankIcon size={16} className="text-zinc-500" />}
             title={"Investido"}
             value={typesPercentage[TransactionsType.INVESTMENT]}
           />
