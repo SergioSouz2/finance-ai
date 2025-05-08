@@ -6,7 +6,7 @@ import Stripe from "stripe";
 export const creteStripeCheckout = async () => {
   const { userId } = await auth();
   if (!userId) {
-    throw new Error("Unathorized");
+    throw new Error("Unauthorized");
   }
 
   if (!process.env.STRIPE_SECRET_KEY) {
