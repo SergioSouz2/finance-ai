@@ -1,0 +1,24 @@
+
+
+# BANCO DE DADOS POSTGRESQL -> LOCAL NA MINHA MAQUINA
+DATABASE_URL="postgresql://postgres:root@localhost:5432/financeIA?schema=public"
+
+# BANCO DE DADOS POSTGRESQL -> NEON DB -> ONLINE
+# DATABASE_URL="postgresql://neondb_owner:npg_4dyUt7MKlzhw@ep-cold-recipe-ac85lljh-pooler.sa-east-1.aws.neon.tech/neondb?sslmode=require"
+
+
+
+# CLERK
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_cG9zc2li[[[bGUtcGV[[hY29jay00OC5jbGVyay5hY2NvdW50cy5kZXYk
+CLERK_SECRET_KEY=[[sk_test_p3vkDjZCkr1LPgIgENWBgr4uWpiuF2mLF9JkYtxoYg]]
+
+#Stripe
+STRIPE_PREMIUM_PLAN_PRICE_ID='[[price_1RLyYkGd0VQGx488ZTQAzWCh]]'
+STRIPE_SECRET_KEY="[[sk_test_51RLxZ3Gd0VQGx488wlfAsoGcihilMD7W2iX1oA]][[[eH9GYoCIdCGH2a2wwD9Ca38gHY3f9QrT6kCz3O5a8vWlPjSWSn00tEADn4k1"
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_test_51RLxZ3Gd0VQGx488TkuG[[[DYuWvrVe7TYSLPqsxWlNY7zGa823dWelzL0aNOtHnIgYvVQNqxsAp4EpIoLxINBNnNks00L0WDSKio"
+STRIPE_WEBHOOK_SECRET="whsec_bb07d4a61674ad284bcc6706[[0747092e86a057[[[fa5a6cc94a324bade522e203b8"
+NEXT_PUBLIC_STRIPE_CUSTOMER_PORTAL_URL="https://billing.stripe.c[[[om/p/login/test_00wdR998EbEA7FG8qH6oo00"
+
+
+#OpenAI
+# OPENAI_API_KEY="sk-4j0xk2q3v8r7g1m5e3t3BlbkFJ9T3Q6X0Z2G4Y1a5h8c7b5f"
